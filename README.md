@@ -56,8 +56,3 @@ int main()
     std::cin.get();
     return 0;
 }```
-
-Result:
-```[+] Hooked
-Damaged for 999
-[+] 0x012E6E98```
