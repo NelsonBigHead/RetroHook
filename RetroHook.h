@@ -18,7 +18,7 @@ namespace RetroHook_Util
 
 enum RetroCodes_t
 {
-    RS_INITIALIZED,        // Successfully initialized. (Constructor)
+    RC_INITIALIZED,        // Successfully initialized. (Constructor)
     RC_HOOK_SUCCESS,       // Hook function succeeded.
     RC_HOOK_FAIL,          // Hook function failed.
     RC_BAD_BASE,           // Base class base address.
@@ -112,7 +112,7 @@ public:
         // Make a copy of the entire table.
         memcpy(m_pVmt, &m_originalAddr[-1], (sizeof(uintptr_t) * m_functionCount) + sizeof(uintptr_t));
 
-        m_currentStatus = RS_INITIALIZED;
+        m_currentStatus = RC_INITIALIZED;
     }
 
     /// <summary>
