@@ -61,7 +61,7 @@ int main()
 
 ## x64 Usage
 The following code below is an example of RetroHook compiled on x64 with MSVC 2022. Do keep in mind types such as `uintptr_t` and `size_t` are automatically deduced at compile-time.
-```
+``` cpp
 #include <iostream>
 #include <Windows.h>
 
