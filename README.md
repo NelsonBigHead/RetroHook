@@ -7,7 +7,8 @@ RetroHook is an x86/x64, minimalistic header only library for placing hooks on v
 
 ## x86 Use
 The following code below is an example of RetroHook compiled on x86 with MSVC 2022. Do keep in mind types such as `uintptr_t` and `size_t` are automatically deduced at compile-time.
-```cpp
+```
+cpp
 #include <iostream>
 #include <Windows.h>
 
@@ -55,6 +56,7 @@ int main()
 
     std::cin.get();
     return 0;
-}```
+}
+```
 
-E
+Dev
