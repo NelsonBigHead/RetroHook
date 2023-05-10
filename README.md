@@ -44,7 +44,7 @@ int main()
     if (vmt1->SetHook())
     {
         printf("[+] Hooked\n");
-        gameClass->DamagePlayer(123);
+        gameClass->DamagePlayer(999);
 
         printf("[+] 0x%p\n", vmt1->GetHookedAddr());
     }
@@ -56,3 +56,8 @@ int main()
     std::cin.get();
     return 0;
 }```
+
+Result:
+```[+] Hooked
+Damaged for 999
+[+] 0x012E6E98```
