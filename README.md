@@ -27,7 +27,7 @@ DamagePlayer_t oDamagePlayer = nullptr;
 
 void __stdcall DamagePlayerHk(int forAmount)
 {
-    return oDamagePlayer(forAmount);
+    return oDamagePlayer(999);
 }
 
 int main()
@@ -46,7 +46,8 @@ int main()
         printf("[+] Hooked\n");
         gameClass->DamagePlayer(999);
 
-        printf("[+] 0x%p\n", vmt1->GetHookedAddr());
+        vmt1->RemoveHook();
+        gameClass->DamagePlayer(123);
     }
     else
     {
@@ -79,7 +80,7 @@ DamagePlayer_t oDamagePlayer = nullptr;
 
 void __fastcall DamagePlayerHk(void* ecx, int forAmount)
 {
-    return oDamagePlayer(ecx, forAmount);
+    return oDamagePlayer(ecx, 999);
 }
 
 int main()
@@ -98,7 +99,8 @@ int main()
         printf("[+] Hooked\n");
         gameClass->DamagePlayer(123);
 
-        printf("[+] 0x%p\n", vmt1->GetHookedAddr());
+        vmt1->RemoveHook();
+        gameClass->DamagePlayer(123);
     }
     else
     {
